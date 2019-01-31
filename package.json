@@ -1,0 +1,46 @@
+{
+    "private": true,
+    "name": "battery-life-extender",
+    "description": "",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": {
+        "name": "Piotr Kowalski",
+        "email": "piecioshka@gmail.com",
+        "url": "https://piecioshka.pl/"
+    },
+    "scripts": {
+        "clear": "rm -rf dist/ coverage/ .nyc_output/",
+        "clear:all": "rm -rf node_modules/ && npm run clear",
+        "predist": "npm run clear",
+        "dist": "electron-builder",
+        "test": "npm run test:mocha",
+        "test:mocha": "mocha",
+        "test:mocha:watch": "mocha --watch",
+        "start": "electron .",
+        "coverage": "nyc npm run test && nyc report --reporter=html",
+        "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+        "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r",
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "auto-launch": "^5.0.5",
+        "battery-level": "^3.0.0",
+        "debug": "^4.1.1",
+        "is-charging": "^2.0.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "codecov": "^3.1.0",
+        "electron": "^4.0.3",
+        "electron-builder": "^20.38.5",
+        "eslint": "^5.12.1",
+        "eslint-config-piecioshka": "^2.0.1",
+        "mocha": "^5.2.0",
+        "nyc": "^13.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:piecioshka/battery-life-extender.git"
+    }
+}
