@@ -8,10 +8,6 @@
             "dmg",
             "zip"
         ],
-        "icon": "./images/app-icon.png",
-        "extendInfo": {
-            // TODO(piecioshka): Hide icon in Dock
-            // "LSUIElement": 1
-        }
+        "icon": "./images/app-icon.png"
     }
 }

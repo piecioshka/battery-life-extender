@@ -1,5 +1,7 @@
 const path = require('path');
-const root = path.join(__dirname, '..');
+const { app } = require('electron');
+
+const root = app.getAppPath();
 
 const ONE_SECOND = 1000; // in milliseconds unit
 const CHECKING_BATTERY_STATUS_INTERVAL_TIME = 60; // in seconds unit

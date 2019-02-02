@@ -21,16 +21,16 @@ async function bootstrap() {
     app.hide();
     app.dock.hide();
 
-    // Best advantage will be when app is running after restart
-    autoStart();
+    // For production version
+    if (app.isPackaged) {
+        // Best advantage will be when app is running after restart
+        autoStart();
+    }
 
     if (app.isInApplicationsFolder()) {
         console.log('App is in /Applications folder');
     } else {
         console.warn('App is NOT in /Applications folder');
-        // Good practice
-        // TODO(piecioshka): Move only dist version of app
-        // app.moveToApplicationsFolder();
     }
 
     setInterval(async () => {

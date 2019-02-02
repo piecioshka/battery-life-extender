@@ -10,7 +10,7 @@ const { appName } = require('./config');
 module.exports = {
     setup() {
         const appFile = app.getPath('exe');
-        console.log('setup', appFile);
+        console.log('setup');
 
         const autoLauncher = new AutoLaunch({
             name: appName,
