@@ -16,7 +16,7 @@
 * :white_check_mark: Display notification when the battery level is less than 15%
 * :white_check_mark: Display notification when the battery level is almost 100%
 * :no_entry: Support multi language (it is support polish only - for now)
-* :no_entry: Display icon in menubar (helpful for quit from app)
+* :no_entry: Display icon in the menubar (helpful for quit from the app)
 
 ## Installation
 
