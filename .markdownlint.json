@@ -22,6 +22,9 @@
         "code_blocks": false,
         "headings": false
     },
+    "MD024": {
+        "siblings_only": true
+    },
     "MD026": {
         "punctuation": ".,;:"
     },
