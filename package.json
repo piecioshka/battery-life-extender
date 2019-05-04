@@ -18,8 +18,7 @@
         "test:mocha": "mocha",
         "test:mocha:watch": "mocha --watch",
         "start": "electron .",
-        "coverage": "nyc npm run test && nyc report --reporter=html",
-        "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+        "coverage": "nyc npm run test && nyc report --reporter=text-lcov | coveralls -v",
         "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r",
         "lint": "eslint ."
     },
@@ -31,13 +30,13 @@
     },
     "devDependencies": {
         "chai": "^4.2.0",
-        "codecov": "^3.1.0",
-        "electron": "^4.0.3",
-        "electron-builder": "^20.38.5",
-        "eslint": "^5.12.1",
+        "coveralls": "^3.0.3",
+        "electron": "^5.0.1",
+        "electron-builder": "^20.39.0",
+        "eslint": "^5.16.0",
         "eslint-config-piecioshka": "^2.0.1",
-        "mocha": "^5.2.0",
-        "nyc": "^13.1.0"
+        "mocha": "^6.1.4",
+        "nyc": "^14.1.0"
     },
     "repository": {
         "type": "git",
