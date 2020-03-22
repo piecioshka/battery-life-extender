@@ -1,7 +1,6 @@
 # battery-life-extender
 
 [![travis](https://img.shields.io/travis/piecioshka/battery-life-extender.svg)](https://travis-ci.org/piecioshka/battery-life-extender)
-[![dependencies](https://david-dm.org/piecioshka/battery-life-extender.svg)](https://github.com/piecioshka/battery-life-extender)
 [![coveralls](https://coveralls.io/repos/github/piecioshka/battery-life-extender/badge.svg?branch=master)](https://coveralls.io/github/piecioshka/battery-life-extender?branch=master)
 
 :computer: macOS desktop app used good practice to extend battery health.
