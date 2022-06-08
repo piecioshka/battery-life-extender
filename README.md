@@ -11,7 +11,7 @@
 
 * :white_check_mark: Display notification when the battery level is less than 15%
 * :white_check_mark: Display notification when the battery level is almost 100%
-* :white_check_mark: Display icon in the menubar (helpful for quit from the app)
+* :white_check_mark: Display tray icon in the menubar
 
 ## Installation
 
@@ -22,11 +22,7 @@
 
 The app will be running when system staring.
 
-## How to close the app?
-
-Kill process with a name `Battery Life Extender`.
-
-## How to develop?
+## Development
 
 ```bash
 npm install
