@@ -1,8 +1,5 @@
 # battery-life-extender
 
-[![travis-ci](https://api.travis-ci.com/piecioshka/battery-life-extender.svg?branch=master)](https://app.travis-ci.com/github/piecioshka/battery-life-extender)
-[![coveralls](https://coveralls.io/repos/github/piecioshka/battery-life-extender/badge.svg?branch=master)](https://coveralls.io/github/piecioshka/battery-life-extender?branch=master)
-
 :computer: macOS desktop app used good practice to extend battery health.
 
 ## Demo 🎉
@@ -14,8 +11,7 @@
 
 * :white_check_mark: Display notification when the battery level is less than 15%
 * :white_check_mark: Display notification when the battery level is almost 100%
-* :no_entry: Support multi language (it is support polish only - for now)
-* :no_entry: Display icon in the menubar (helpful for quit from the app)
+* :white_check_mark: Display icon in the menubar (helpful for quit from the app)
 
 ## Installation
 
@@ -32,8 +28,10 @@ Kill process with a name `Battery Life Extender`.
 
 ## How to develop?
 
-1. Install deps (`npm install`)
-2. Open app (`npm start`)
+```bash
+npm install
+npm start
+```
 
 ## Unit tests
 

@@ -14,29 +14,17 @@
         "clear:all": "rm -rf node_modules/ && npm run clear",
         "predist": "npm run clear",
         "dist": "electron-builder",
-        "test": "npm run test:mocha",
-        "test:mocha": "mocha",
-        "test:mocha:watch": "mocha --watch",
-        "start": "electron .",
-        "coverage": "nyc npm run test && nyc report --reporter=text-lcov | coveralls -v",
-        "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r",
-        "lint": "eslint ."
+        "start": "electron ."
     },
     "dependencies": {
         "auto-launch": "^5.0.5",
         "battery-level": "^3.0.0",
-        "debug": "^4.1.1",
+        "debug": "^4.3.4",
         "is-charging": "^2.0.0"
     },
     "devDependencies": {
-        "chai": "^4.2.0",
-        "coveralls": "^3.0.11",
-        "electron": "^8.1.1",
-        "electron-builder": "^22.4.1",
-        "eslint": "^6.8.0",
-        "eslint-config-piecioshka": "^2.0.2",
-        "mocha": "^7.1.1",
-        "nyc": "^15.0.0"
+        "electron": "^19.0.3",
+        "electron-builder": "^23.0.3"
     },
     "repository": {
         "type": "git",
