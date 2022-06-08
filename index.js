@@ -7,6 +7,7 @@ const console = {
   error: require("debug")("battery-life-extender:index:error"),
 };
 
+require("./src/tray");
 const { app } = require("electron");
 const { appName, INTERVAL_TIME } = require("./src/config");
 const { verify } = require("./src/logic");
@@ -15,7 +16,7 @@ const { setup: autoStart } = require("./src/auto-launcher");
 /**
  * Go go go!!1
  */
-async function bootstrap() {
+async function main() {
   app.setName(appName);
 
   // App should works in background
@@ -29,9 +30,9 @@ async function bootstrap() {
   }
 
   if (app.isInApplicationsFolder()) {
-    console.log("App is in /Applications folder");
+    console.log("App is in /Applications/ folder");
   } else {
-    console.warn("App is NOT in /Applications folder");
+    console.warn("App is NOT in /Applications/ folder");
   }
 
   setInterval(async () => {
@@ -43,4 +44,4 @@ async function bootstrap() {
   }, INTERVAL_TIME);
 }
 
-app.on("ready", bootstrap);
+app.on("ready", main);

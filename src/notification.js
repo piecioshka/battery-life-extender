@@ -9,8 +9,8 @@ const { Notification } = require("electron");
 const {
   locale,
   appName,
-  batteryFullIcon,
-  batteryLowIcon,
+  batteryFullIconPath,
+  batteryLowIconPath,
 } = require("./config");
 
 const DEFAULT_SETTINGS = {
@@ -37,18 +37,18 @@ module.exports = {
   connect() {
     const settings = {
       ...DEFAULT_SETTINGS,
-      body: locale.pl.CONNECT_POWER,
+      body: locale.en.CONNECT_POWER,
       sound: "Hero",
-      icon: batteryLowIcon,
+      icon: batteryLowIconPath,
     };
     notify(settings);
   },
   disconnect() {
     const settings = {
       ...DEFAULT_SETTINGS,
-      body: locale.pl.DISCONNECT_POWER,
+      body: locale.en.DISCONNECT_POWER,
       sound: "Ping",
-      icon: batteryFullIcon,
+      icon: batteryFullIconPath,
     };
     notify(settings);
   },

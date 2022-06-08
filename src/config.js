@@ -9,19 +9,19 @@ const CHECKING_BATTERY_STATUS_INTERVAL_TIME = 60; // in seconds unit
 module.exports = {
   appName: "Battery Life Extender",
 
-  batteryLowIcon: path.join(root, "images", "battery", "battery-low.png"),
-  batteryFullIcon: path.join(root, "images", "battery", "battery-full.png"),
+  batteryLowIconPath: path.join(root, "images", "battery", "battery-low.png"),
+  batteryFullIconPath: path.join(root, "images", "battery", "battery-full.png"),
+  trayIconPath: path.join(root, "icons", "app-icon-16x16.png"),
 
   // Battery levels are between 0 and 1.
   MINIMAL_BATTERY_LIFE: 0.15,
   MAXIMUM_BATTERY_LIFE: 0.97,
 
   locale: {
-    pl: {
-      CONNECT_POWER: "Bateria rozładowana.\nPodłącz przewód zasilający!",
-      DISCONNECT_POWER:
-        "Bateria w pełni naładowana.\nOdłącz przewód zasilający!",
-      CLOSE: "Zamknij",
+    en: {
+      CONNECT_POWER: "Battery discharged\nPlug in the power cable!",
+      DISCONNECT_POWER: "Battery fully charged\nDisconnect the power cable!",
+      CLOSE: "Close",
     },
   },
 

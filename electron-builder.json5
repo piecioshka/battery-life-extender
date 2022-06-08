@@ -1,13 +1,10 @@
 {
-    "appId": "pl.piecioshka.battery-life-extender",
-    "productName": "Battery Life Extender",
-    "copyright": "Copyright © 2019 Piotr 'piecioshka' Kowalski",
-    "asar": true,
-    "mac": {
-        "target": [
-            "dmg",
-            "zip"
-        ],
-        "icon": "./images/app-icon.png"
-    }
+  appId: "pl.piecioshka.battery-life-extender",
+  productName: "Battery Life Extender",
+  copyright: "Copyright © 2019 Piotr 'piecioshka' Kowalski",
+  asar: true,
+  mac: {
+    target: ["dmg", "zip"],
+    icon: "./icons/app-icon-512x512.png",
+  },
 }
