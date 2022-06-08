@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "auto-launch": "^5.0.5",
-    "battery-level": "^3.0.0",
+    "battery-level": "^1.2.0",
     "debug": "^4.3.4",
     "is-charging": "^2.0.0"
   },
