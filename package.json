@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "battery-life-extender",
-  "description": "",
+  "description": "macOS desktop app notify about battery health",
   "version": "1.0.1",
   "license": "MIT",
   "author": {
@@ -10,12 +10,12 @@
     "url": "https://piecioshka.pl/"
   },
   "scripts": {
-    "dist": "electron-builder",
+    "build": "electron-builder",
     "start": "electron ."
   },
   "dependencies": {
     "auto-launch": "^5.0.5",
-    "battery-level": "^1.2.0",
+    "battery-level": "^3.0.0",
     "debug": "^4.3.4",
     "is-charging": "^2.0.0"
   },

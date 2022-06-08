@@ -1,6 +1,6 @@
 # battery-life-extender
 
-:computer: macOS desktop app used good practice to extend battery health.
+:computer: macOS desktop app notify about battery health.
 
 ## Demo 🎉
 
@@ -43,4 +43,4 @@ npm run coverage
 
 ## License
 
-[The MIT License](http://piecioshka.mit-license.org) @ 2019
+[The MIT License](http://piecioshka.mit-license.org) @ 2019-2022
