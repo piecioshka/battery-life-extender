@@ -3,6 +3,7 @@ require("debug").enable("*");
 const console = {
   log: require("debug")("battery-life-extender:index:log"),
   warn: require("debug")("battery-life-extender:index:warn"),
+  debug: require("debug")("battery-life-extender:index:debug"),
   error: require("debug")("battery-life-extender:index:error"),
 };
 

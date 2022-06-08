@@ -1,33 +1,30 @@
 {
-    "private": true,
-    "name": "battery-life-extender",
-    "description": "",
-    "version": "1.0.1",
-    "license": "MIT",
-    "author": {
-        "name": "Piotr Kowalski",
-        "email": "piecioshka@gmail.com",
-        "url": "https://piecioshka.pl/"
-    },
-    "scripts": {
-        "clear": "rm -rf dist/ coverage/ .nyc_output/",
-        "clear:all": "rm -rf node_modules/ && npm run clear",
-        "predist": "npm run clear",
-        "dist": "electron-builder",
-        "start": "electron ."
-    },
-    "dependencies": {
-        "auto-launch": "^5.0.5",
-        "battery-level": "^3.0.0",
-        "debug": "^4.3.4",
-        "is-charging": "^2.0.0"
-    },
-    "devDependencies": {
-        "electron": "^19.0.3",
-        "electron-builder": "^23.0.3"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:piecioshka/battery-life-extender.git"
-    }
+  "private": true,
+  "name": "battery-life-extender",
+  "description": "",
+  "version": "1.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Piotr Kowalski",
+    "email": "piecioshka@gmail.com",
+    "url": "https://piecioshka.pl/"
+  },
+  "scripts": {
+    "dist": "electron-builder",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "battery-level": "^3.0.0",
+    "debug": "^4.3.4",
+    "is-charging": "^2.0.0"
+  },
+  "devDependencies": {
+    "electron": "^19.0.3",
+    "electron-builder": "^23.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:piecioshka/battery-life-extender.git"
+  }
 }

@@ -1,5 +1,7 @@
 const console = {
   log: require("debug")("battery-life-extender:auto-launcher:log"),
+  warn: require("debug")("battery-life-extender:auto-launcher:warn"),
+  debug: require("debug")("battery-life-extender:auto-launcher:debug"),
   error: require("debug")("battery-life-extender:auto-launcher:error"),
 };
 

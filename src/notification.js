@@ -1,6 +1,7 @@
 const console = {
   log: require("debug")("battery-life-extender:notification:log"),
   warn: require("debug")("battery-life-extender:notification:warn"),
+  debug: require("debug")("battery-life-extender:notification:debug"),
   error: require("debug")("battery-life-extender:notification:error"),
 };
 
