@@ -2,7 +2,7 @@
 
 :computer: macOS desktop app notify about battery health.
 
-## Demo 🎉
+## Preview 🎉
 
 ![](./screenshots/demo-battery-low.png)
 ![](./screenshots/demo-battery-full.png)
