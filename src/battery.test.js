@@ -31,5 +31,8 @@ test("treats a held charge on the adapter as charging", () => {
 });
 
 test("fails on a machine without a battery", () => {
-  assert.throws(() => parsePmsetOutput("Now drawing from 'AC Power'\n"), /No battery/);
+  assert.throws(
+    () => parsePmsetOutput("Now drawing from 'AC Power'\n"),
+    /No battery/,
+  );
 });

@@ -17,14 +17,17 @@
     "start": "electron .",
     "build": "electron-builder --mac",
     "build:mac": "electron-builder --mac",
-    "test": "node --test"
+    "test": "node --test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "debug": "^4.3.4"
   },
   "devDependencies": {
     "electron": "^44.5.1",
-    "electron-builder": "^26.15.3"
+    "electron-builder": "^26.15.3",
+    "prettier": "^3.9.9"
   },
   "repository": {
     "type": "git",

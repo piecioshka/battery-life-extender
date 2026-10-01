@@ -7,7 +7,10 @@ let tray = null;
 
 app.whenReady().then(() => {
   tray = new Tray(trayIconPath);
-  const contextMenu = Menu.buildFromTemplate([{ role: "about" }, { role: "quit" }]);
+  const contextMenu = Menu.buildFromTemplate([
+    { role: "about" },
+    { role: "quit" },
+  ]);
   tray.setToolTip(appName);
   tray.setContextMenu(contextMenu);
 });
