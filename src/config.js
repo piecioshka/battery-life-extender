@@ -1,5 +1,6 @@
 const path = require("path");
 const { app } = require("electron");
+const { MINIMAL_BATTERY_LIFE, MAXIMUM_BATTERY_LIFE } = require("./limits");
 
 const root = app.getAppPath();
 
@@ -13,9 +14,8 @@ module.exports = {
   batteryFullIconPath: path.join(root, "images", "battery", "battery-full.png"),
   trayIconPath: path.join(root, "icons", "app-icon-16x16.png"),
 
-  // Battery levels are between 0 and 1.
-  MINIMAL_BATTERY_LIFE: 0.15,
-  MAXIMUM_BATTERY_LIFE: 0.97,
+  MINIMAL_BATTERY_LIFE,
+  MAXIMUM_BATTERY_LIFE,
 
   locale: {
     en: {

@@ -9,22 +9,28 @@
     "email": "piecioshka@gmail.com",
     "url": "https://piecioshka.pl/"
   },
+  "engines": {
+    "node": ">=24"
+  },
+  "main": "index.js",
   "scripts": {
-    "build": "electron-builder",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder --mac",
+    "build:mac": "electron-builder --mac",
+    "test": "node --test"
   },
   "dependencies": {
-    "auto-launch": "^5.0.5",
-    "battery-level": "^3.0.0",
-    "debug": "^4.3.4",
-    "is-charging": "^2.0.0"
+    "debug": "^4.3.4"
   },
   "devDependencies": {
-    "electron": "^19.0.3",
-    "electron-builder": "^23.0.3"
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:piecioshka/battery-life-extender.git"
+  },
+  "allowScripts": {
+    "electron-winstaller": false
   }
 }

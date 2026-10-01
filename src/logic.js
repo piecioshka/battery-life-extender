@@ -4,28 +4,24 @@ const console = {
   debug: require("debug")("battery-life-extender:logic:debug"),
   error: require("debug")("battery-life-extender:logic:error"),
 };
-const batteryLevel = require("battery-level");
-const isCharging = require("is-charging");
+const { readBatteryState } = require("./battery");
 
 const { disconnect, connect } = require("./notification");
-const { MINIMAL_BATTERY_LIFE, MAXIMUM_BATTERY_LIFE } = require("./config");
+const { getBatteryAction } = require("./rules");
 
 async function verify() {
   try {
-    const date = new Date().toLocaleString();
-    const level = await batteryLevel();
-    const charging = await isCharging();
+    const date = new Date().toISOString();
+    const { level, charging } = await readBatteryState();
 
     console.log({ date, level, charging });
 
-    if (level < MINIMAL_BATTERY_LIFE && !charging) {
-      connect();
-      return;
-    }
+    const action = getBatteryAction(level, charging);
 
-    if (level >= MAXIMUM_BATTERY_LIFE && charging) {
+    if (action === "connect") {
+      connect();
+    } else if (action === "disconnect") {
       disconnect();
-      return;
     }
   } catch (err) {
     console.error(err);

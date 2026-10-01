@@ -5,20 +5,13 @@ const console = {
   error: require("debug")("battery-life-extender:auto-launcher:error"),
 };
 
-const AutoLaunch = require("auto-launch");
 const { app } = require("electron");
-const { appName } = require("./config");
 
 module.exports = {
   setup() {
-    const appFile = app.getPath("exe");
     console.log("setup");
 
-    const autoLauncher = new AutoLaunch({
-      name: appName,
-      path: appFile,
-    });
-
-    autoLauncher.enable();
+    // Registers the app as a login item (SMAppService on macOS 13+).
+    app.setLoginItemSettings({ openAtLogin: true });
   },
 };

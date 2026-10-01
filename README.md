@@ -10,7 +10,7 @@
 
 [![Release](https://img.shields.io/github/v/release/piecioshka/battery-life-extender)](https://github.com/piecioshka/battery-life-extender/releases/latest)
 [![Platforms](https://img.shields.io/badge/platforms-macOS-lightgrey)](#installation)
-[![Electron](https://img.shields.io/badge/Electron-19-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
+[![Electron](https://img.shields.io/badge/Electron-44-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
 [![Menu bar](https://img.shields.io/badge/lives%20in-menu%20bar-blue)](#features)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://piecioshka.mit-license.org)
 
@@ -53,11 +53,13 @@ npm start
 npm test
 ```
 
-## Code coverage
+## Build
 
 ```bash
-npm run coverage
+npm run build
 ```
+
+Installers (`*.dmg` and `*.zip` for Apple silicon and Intel) land in `dist/`.
 
 ## License
 
