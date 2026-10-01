@@ -8,6 +8,8 @@
 
 <!-- prettier-ignore-start -->
 
+[![github-ci](https://github.com/piecioshka/battery-life-extender/actions/workflows/ci.yml/badge.svg)](https://github.com/piecioshka/battery-life-extender/actions/workflows/ci.yml)
+[![release](https://github.com/piecioshka/battery-life-extender/actions/workflows/release.yml/badge.svg)](https://github.com/piecioshka/battery-life-extender/actions/workflows/release.yml)
 [![Release](https://img.shields.io/github/v/release/piecioshka/battery-life-extender)](https://github.com/piecioshka/battery-life-extender/releases/latest)
 [![Platforms](https://img.shields.io/badge/platforms-macOS-lightgrey)](#installation)
 [![Electron](https://img.shields.io/badge/Electron-44-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
@@ -33,12 +35,11 @@ A macOS menu bar app that notifies you about battery health: when the level drop
 
 ## Installation
 
-1. Download `*.zip` file from <https://github.com/piecioshka/battery-life-extender/releases>
-2. Unzip
-3. Move `*.dmg` file to Applications
-4. Run `Battery Life Extender.dmg`
+1. Download the `*.dmg` for your Mac (`arm64` for Apple silicon, the one without an architecture for Intel) from the [latest release](https://github.com/piecioshka/battery-life-extender/releases/latest)
+2. Open it and drag **Battery Life Extender** to Applications
+3. The app is ad-hoc signed, not notarized: on first launch open System Settings > Privacy & Security and click **Open Anyway**
 
-The app will be running when system staring.
+The app starts automatically after you log in.
 
 ## Development
 
