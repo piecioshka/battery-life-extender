@@ -29,9 +29,14 @@ A macOS menu bar app that notifies you about battery health: when the level drop
 
 ## Features
 
-- ✅ Display notification when the battery level is less than 15%
-- ✅ Display notification when the battery level is almost 100%
-- ✅ Display tray icon in the menubar
+- 🪫 Notifies you to plug the charger in when the battery drops below 15%
+- 🔌 Notifies you to unplug it when the battery is almost full (97%)
+- 📍 Lives in the menu bar, no Dock icon and no window
+- 🚀 Starts automatically after you log in
+
+## Requirements
+
+macOS only: the battery level and the power source come from `pmset -g batt`.
 
 ## Installation
 
@@ -48,19 +53,41 @@ npm install
 npm start
 ```
 
+`npm start` runs the app from the terminal with debug logs (the battery is checked every 60 seconds).
+
+> [!NOTE]
+> Since Electron 42 macOS shows notifications only from a signed app. The Electron binary behind `npm start` is unsigned, so its notifications fail silently. To see them, build the app and open the ad-hoc signed `dist/mac-arm64/Battery Life Extender.app`. The packaged app registers itself as a login item: remove it in System Settings > General > Login Items when you are done.
+
 ## Unit tests
 
 ```bash
 npm test
 ```
 
+Unit tests use the built-in `node:test` runner and do not start Electron.
+
 ## Build
 
 ```bash
-npm run build
+npm run build:mac
 ```
 
-Installers (`*.dmg` and `*.zip` for Apple silicon and Intel) land in `dist/`.
+Installers (`*.dmg` and `*.zip` for Apple silicon and Intel) land in `dist/`. `npm run build` does the same.
+
+## CI
+
+GitHub Actions workflow `.github/workflows/ci.yml` checks formatting and runs the tests on every push and pull request.
+
+`.github/workflows/release.yml` builds the installers on `macos-latest` with `npm run build:mac` and verifies the ad-hoc signature. Started by hand from the Actions tab, it only uploads the installers as workflow artifacts.
+
+## Release
+
+```bash
+npm version patch
+git push --follow-tags
+```
+
+`npm version` bumps `package.json` and creates the `vX.Y.Z` tag. A pushed tag runs the release workflow: the `release` job checks that the tag matches the `package.json` version and publishes the installers as a GitHub release.
 
 ## License
 
