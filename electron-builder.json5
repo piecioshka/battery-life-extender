@@ -5,6 +5,6 @@
   asar: true,
   mac: {
     target: ["dmg", "zip"],
-    icon: "./icons/app-icon-512x512.png",
+    icon: "./icons/app-icon.png",
   },
 }

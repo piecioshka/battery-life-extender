@@ -1,6 +1,24 @@
-# battery-life-extender
+<div align="center">
 
-:computer: macOS desktop app notify about battery health.
+<img src="./icons/app-icon.png" alt="Battery Life Extender icon" width="160" height="160">
+
+</div>
+
+# Battery Life Extender 🔋
+
+<!-- prettier-ignore-start -->
+
+[![Release](https://img.shields.io/github/v/release/piecioshka/battery-life-extender)](https://github.com/piecioshka/battery-life-extender/releases/latest)
+[![Platforms](https://img.shields.io/badge/platforms-macOS-lightgrey)](#installation)
+[![Electron](https://img.shields.io/badge/Electron-19-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
+[![Menu bar](https://img.shields.io/badge/lives%20in-menu%20bar-blue)](#features)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](https://piecioshka.mit-license.org)
+
+<!-- prettier-ignore-end -->
+
+🔋 **Know when to plug the charger in and when to pull it out.**
+
+A macOS menu bar app that notifies you about battery health: when the level drops below 15% and when it is almost full.
 
 ## Preview 🎉
 
@@ -9,9 +27,9 @@
 
 ## Features
 
-* :white_check_mark: Display notification when the battery level is less than 15%
-* :white_check_mark: Display notification when the battery level is almost 100%
-* :white_check_mark: Display tray icon in the menubar
+- ✅ Display notification when the battery level is less than 15%
+- ✅ Display notification when the battery level is almost 100%
+- ✅ Display tray icon in the menubar
 
 ## Installation
 
