@@ -4,4 +4,4 @@ npm-debug.log
 dist/
 
 tmp/*
-!tmp/.gitkeep
+tmp/
